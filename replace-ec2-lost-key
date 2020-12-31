@@ -1,0 +1,21 @@
+Stop lost-ec2 instance, wait for it to be ‘stopped’ then
+Go to ec2-> volumes and detach root volume of lost-ec2 instance.
+Create a new-ec2 instance(same subnet as lost-ec2) with a new key pair and
+Volumes - > select lost-ec2 instance volume and attach to new-ec2 instance
+Ssh to the new-ec2 instance and you can see 2 volumes
+ 
+
+ 
+Xvdf1 is the recently attached volume
+Mkdir -p /var/lost-key-disk. ----------- *** this will create a mount point
+Mount /xvdf/xvdf1 /var/lost-key-disk -----------------*** this will mount disk to new mount point
+ 
+Now copy new authorized keys to the volume
+cat /home/ec2-user/.ssh/authorized_keys >> /var/recovery-disk/home/ec2-user/.ssh/authorized_keys.  ----------*** adds new auth keys to the lost key disk
+umount /var/lost-key-disk -------------*** release mount point
+ 
+Go to console and detach root volume from new-ec2 and attach it to lost-ec2-instance
+Update attachment as : /dev/xvda
+ 
+Now ssh to lost-ec2 instance with the same new key pair as new-ec2 instance. Recovery should be complete.
+ 
