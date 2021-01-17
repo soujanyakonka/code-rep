@@ -1,33 +1,52 @@
 import boto3
-import csv
+import json
+import os
+
+bucket_name = os.environ['BUCKET_NAME']
+csv_key = os.environ['CSV_KEY_NAME'] 
+# csvdynamo.csv
+TABLE_NAME = os.environ['TABLE_NAME']
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table(TABLE_NAME)
+
+          
+# temprorary file to store csv downloaded from s3
+tmp_csv_file = '/tmp/images.csv'
+
+s3 = boto3.resource('s3')
+#db_table = boto3.resource('dynamodb').Table(table_name)
+
+def save_to_dynamodb(key,sender_id,label,kids):
+  print('save to dynamodb')
+  response1 = table.put_item(
+      Item={
+        'key': key,
+        'sender_id': sender_id,
+        'label': label,
+        'kids': kids,
+      })
+  print('load complete')
+  return
 
 def lambda_handler(event, context):
-    region='us-east-1'
-    recList=[]
-    try:            
-        s3=boto3.client('s3')            
-        dyndb = boto3.client('dynamodb', region_name=region)
-        confile= s3.get_object(Bucket='my-bucket', Key='employee.csv')
-        recList = confile['Body'].read().split('\n')
-        firstrecord=True
-        csv_reader = csv.reader(recList, delimiter=',', quotechar='"')
-        for row in csv_reader:
-            if (firstrecord):
-                firstrecord=False
-                continue
-            key = row[0]
-            sender_id = row[1].replace(',','').replace('$','') if row[1] else '-'
-            label = row[2].replace(',','').replace('Not sure','Apparel') if row[2] else 'Apparel'
-            kids = row[3].replace(',','').replace('$','') if row[3] else 'false'
-            response = dyndb.put_item(
-                TableName='Images-data',
-                Item={
-                'key' : {'S':key},
-                'sender_id': {'S':sender_id},
-                'label': {'N':label},
-                'kids': {'BOOL':False},
-                }
-            )
-        print('Put succeeded:')
-    except Exception, e:
-        print (str(e))
+  
+#    os.remove("images.csv")
+
+    s3.meta.client.download_file(
+                  bucket_name, 
+                  csv_key, 
+                  tmp_csv_file)
+    print('file read successful')
+    with open(tmp_csv_file, 'r') as f:
+
+      next(f) # skip header
+      print('next function read')
+      for line in f:
+        print('data read')
+        key,sender_id,label,kids = line.rstrip().split(',')
+        print('data:')
+        result = save_to_dynamodb(key,sender_id,label,kids)
+
+        print(result)
+
+    return {'statusCode': 200}
