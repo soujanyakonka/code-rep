@@ -1,0 +1,193 @@
+~id,~from,~to,~label
+s1,supplies,Snacks,good-to-have
+s2,supplies,Cosmetics,good-to-have
+s3,supplies,Fruits,basic
+s4,supplies,Personal Care,basic
+s5,supplies,Household,basic
+s6,supplies,Clothes,basic
+s7,supplies,Vegetables,basic
+s8,supplies,Office Supplies,good-to-have
+s9,supplies,Beverages,good-to-have
+s10,supplies,Meat,basic
+s11,supplies,Cereal,basic
+s12,supplies,Baby Food,basic
+e1,535113847,Snacks,purchased
+e2,874708545,Cosmetics,purchased
+e3,854349935,Fruits,purchased
+e4,892836844,Personal Care,purchased
+e5,129280602,Household,purchased
+e6,473105037,Clothes,purchased
+e7,754046475,Cosmetics,purchased
+e8,772153747,Fruits,purchased
+e9,847788178,Snacks,purchased
+e10,471623599,Cosmetics,purchased
+e11,554646337,Cosmetics,purchased
+e12,278155219,Clothes,purchased
+e13,243761575,Household,purchased
+e14,223389232,Household,purchased
+e15,509274518,Vegetables,purchased
+e16,563966262,Office Supplies,purchased
+e17,370325791,Fruits,purchased
+e18,881526935,Vegetables,purchased
+e19,871056020,Beverages,purchased
+e20,982711875,Office Supplies,purchased
+e21,580605828,Beverages,purchased
+e22,899161708,Meat,purchased
+e23,993115842,Cosmetics,purchased
+e24,887517058,Cereal,purchased
+e25,227726686,Clothes,purchased
+e26,529418551,Vegetables,purchased
+e27,228578984,Vegetables,purchased
+e28,531506812,Office Supplies,purchased
+e29,464813363,Cosmetics,purchased
+e30,925422465,Cereal,purchased
+e31,630570447,Meat,purchased
+e32,167806136,Snacks,purchased
+e33,644990861,Fruits,purchased
+e34,540298449,Baby Food,purchased
+e35,652215230,Baby Food,purchased
+e36,949540030,Meat,purchased
+e37,121384179,Fruits,purchased
+e38,527171504,Cosmetics,purchased
+e39,546638333,Baby Food,purchased
+e40,429833495,Personal Care,purchased
+e41,947118318,Vegetables,purchased
+e42,239166629,Beverages,purchased
+e43,566964757,Clothes,purchased
+e44,661811530,Vegetables,purchased
+e45,675318276,Clothes,purchased
+e46,829408824,Meat,purchased
+e47,966319501,Meat,purchased
+e48,998599135,Baby Food,purchased
+e49,459109055,Snacks,purchased
+e50,751023089,Baby Food,purchased
+e51,197827565,Office Supplies,purchased
+e52,793321311,Clothes,purchased
+e53,551615655,Personal Care,purchased
+e54,257134425,Snacks,purchased
+e55,314613950,Household,purchased
+e56,299103057,Snacks,purchased
+e57,305963075,Office Supplies,purchased
+e58,500867831,Baby Food,purchased
+e59,669803655,Personal Care,purchased
+e60,669069373,Office Supplies,purchased
+e1,535113847,Snacks,purchased
+e2,874708545,Cosmetics,purchased
+e3,854349935,Fruits,purchased
+e4,892836844,Personal Care,purchased
+e5,129280602,Household,purchased
+e6,473105037,Clothes,purchased
+e7,754046475,Cosmetics,purchased
+e8,772153747,Fruits,purchased
+e9,847788178,Snacks,purchased
+e10,471623599,Cosmetics,purchased
+e11,554646337,Cosmetics,purchased
+e12,278155219,Clothes,purchased
+e13,243761575,Household,purchased
+e14,223389232,Household,purchased
+e15,509274518,Vegetables,purchased
+e16,563966262,Office Supplies,purchased
+e17,370325791,Fruits,purchased
+e18,881526935,Vegetables,purchased
+e19,871056020,Beverages,purchased
+e20,982711875,Office Supplies,purchased
+e21,580605828,Beverages,purchased
+e22,899161708,Meat,purchased
+e23,993115842,Cosmetics,purchased
+e24,887517058,Cereal,purchased
+e25,227726686,Clothes,purchased
+e26,529418551,Vegetables,purchased
+e27,228578984,Vegetables,purchased
+e28,531506812,Office Supplies,purchased
+e29,464813363,Cosmetics,purchased
+e30,925422465,Cereal,purchased
+e31,630570447,Meat,purchased
+e32,167806136,Snacks,purchased
+e33,644990861,Fruits,purchased
+e34,540298449,Baby Food,purchased
+e35,652215230,Baby Food,purchased
+e36,949540030,Meat,purchased
+e37,121384179,Fruits,purchased
+e38,527171504,Cosmetics,purchased
+e39,546638333,Baby Food,purchased
+e40,429833495,Personal Care,purchased
+e41,947118318,Vegetables,purchased
+e42,239166629,Beverages,purchased
+e43,566964757,Clothes,purchased
+e44,661811530,Vegetables,purchased
+e45,675318276,Clothes,purchased
+e46,829408824,Meat,purchased
+e47,966319501,Meat,purchased
+e48,998599135,Baby Food,purchased
+e49,459109055,Snacks,purchased
+e50,751023089,Baby Food,purchased
+e51,197827565,Office Supplies,purchased
+e52,793321311,Clothes,purchased
+e53,551615655,Personal Care,purchased
+e54,257134425,Snacks,purchased
+e55,314613950,Household,purchased
+e56,299103057,Snacks,purchased
+e57,305963075,Office Supplies,purchased
+e58,500867831,Baby Food,purchased
+e59,669803655,Personal Care,purchased
+e60,669069373,Office Supplies,purchased
+r1,535113847,Middle East and North Africa,belongsto
+r2,874708545,Central America and the Caribbean,belongsto
+r3,854349935,Sub-Saharan Africa,belongsto
+r4,892836844,Sub-Saharan Africa,belongsto
+r5,129280602,Central America and the Caribbean,belongsto
+r6,473105037,Europe,belongsto
+r7,754046475,Europe,belongsto
+r8,772153747,Middle East and North Africa,belongsto
+r9,847788178,Europe,belongsto
+r10,471623599,Asia,belongsto
+r11,554646337,Central America and the Caribbean,belongsto
+r12,278155219,Europe,belongsto
+r13,243761575,Europe,belongsto
+r14,223389232,Middle East and North Africa,belongsto
+r15,509274518,Asia,belongsto
+r16,563966262,Central America and the Caribbean,belongsto
+r17,370325791,Sub-Saharan Africa,belongsto
+r18,881526935,Middle East and North Africa,belongsto
+r19,871056020,Australia and Oceania,belongsto
+r20,982711875,Europe,belongsto
+r21,580605828,Sub-Saharan Africa,belongsto
+r22,899161708,Europe,belongsto
+r23,993115842,Sub-Saharan Africa,belongsto
+r24,887517058,Middle East and North Africa,belongsto
+r25,227726686,Sub-Saharan Africa,belongsto
+r26,529418551,Middle East and North Africa,belongsto
+r27,228578984,Middle East and North Africa,belongsto
+r28,531506812,Middle East and North Africa,belongsto
+r29,464813363,Sub-Saharan Africa,belongsto
+r30,925422465,Asia,belongsto
+r31,630570447,Europe,belongsto
+r32,167806136,Asia,belongsto
+r33,644990861,Europe,belongsto
+r34,540298449,Europe,belongsto
+r35,652215230,Central America and the Caribbean,belongsto
+r36,949540030,Asia,belongsto
+r37,121384179,North America,belongsto
+r38,527171504,Sub-Saharan Africa,belongsto
+r39,546638333,Europe,belongsto
+r40,429833495,Central America and the Caribbean,belongsto
+r41,947118318,Europe,belongsto
+r42,239166629,Middle East and North Africa,belongsto
+r43,566964757,Middle East and North Africa,belongsto
+r44,661811530,Middle East and North Africa,belongsto
+r45,675318276,Central America and the Caribbean,belongsto
+r46,829408824,Europe,belongsto
+r47,966319501,Europe,belongsto
+r48,998599135,Asia,belongsto
+r49,459109055,Europe,belongsto
+r50,751023089,Sub-Saharan Africa,belongsto
+r51,197827565,Central America and the Caribbean,belongsto
+r52,793321311,Sub-Saharan Africa,belongsto
+r53,551615655,Asia,belongsto
+r54,257134425,Europe,belongsto
+r55,314613950,Sub-Saharan Africa,belongsto
+r56,299103057,Sub-Saharan Africa,belongsto
+r57,305963075,Middle East and North Africa,belongsto
+r58,500867831,Asia,belongsto
+r59,669803655,Sub-Saharan Africa,belongsto
+r60,669069373,Middle East and North Africa,belongsto
