@@ -1,0 +1,10 @@
+curl -X POST \
+    -H 'Content-Type: application/json' \
+    http://database-1.cluster-cbc15hgj0zli.us-east-1.neptune.amazonaws.com:8182/loader -d '
+    { 
+      "source" : "s3://s3-neptunedata-aether", 
+      "format" : "csv",  
+      "iamRoleArn" : "arn:aws:iam::243019947467:role/aws-service-role/rds.amazonaws.com/AWSServiceRoleForRDS", 
+      "region" : "us-east-1", 
+      "failOnError" : "FALSE"
+    }'
