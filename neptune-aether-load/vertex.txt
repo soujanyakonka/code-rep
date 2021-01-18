@@ -1,61 +1,82 @@
-~id,~label,itemtype:string,saleschannel:string,orderpriority:string,orderdate:string,region:string,shipdate:string,unitssold:string
-535113847,Azerbaijan,Snacks,Online,C,10/08/14,Middle East and North Africa,10/23/14,934
-874708545,Panama,Cosmetics,Offline,L,2/22/15,Central America and the Caribbean,2/27/15,4551
-854349935,Sao Tome and Principe,Fruits,Offline,M,12/09/15,Sub-Saharan Africa,1/18/16,9986
-892836844,Sao Tome and Principe,Personal Care,Online,M,9/17/14,Sub-Saharan Africa,10/12/14,9118
-129280602,Belize,Household,Offline,H,02/04/10,Central America and the Caribbean,03/05/10,5858
-473105037,Denmark,Clothes,Online,C,2/20/13,Europe,2/28/13,1149
-754046475,Germany,Cosmetics,Offline,M,3/31/13,Europe,05/03/13,7964
-772153747,Turkey,Fruits,Online,C,3/26/12,Middle East and North Africa,04/07/12,6307
-847788178,United Kingdom,Snacks,Online,H,12/29/12,Europe,1/15/13,8217
-471623599,Kazakhstan,Cosmetics,Online,H,09/11/15,Asia,9/18/15,2758
-554646337,Haiti,Cosmetics,Online,C,12/27/13,Central America and the Caribbean,01/01/14,1031
-278155219,Italy,Clothes,Online,M,12/17/13,Europe,01/10/14,1165
-243761575,Malta,Household,Offline,L,03/10/15,Europe,4/17/15,3322
-223389232,Jordan,Household,Offline,L,07/09/14,Middle East and North Africa,7/18/14,4693
-509274518,Cambodia,Vegetables,Offline,H,6/14/17,Asia,6/29/17,4502
-563966262,Saint Kitts and Nevis ,Office Supplies,Online,H,08/10/11,Central America and the Caribbean,8/29/11,9004
-370325791,Cameroon,Fruits,Online,H,12/18/15,Sub-Saharan Africa,02/06/16,6486
-881526935,Bahrain,Vegetables,Offline,L,6/26/16,Middle East and North Africa,7/19/16,2264
-871056020,Solomon Islands,Beverages,Offline,C,05/11/15,Australia and Oceania,5/30/15,3688
-982711875,Monaco,Office Supplies,Online,M,1/13/12,Europe,1/17/12,5137
-580605828,Comoros,Beverages,Offline,L,08/10/14,Sub-Saharan Africa,8/20/14,3022
-899161708,Iceland,Meat,Online,L,4/22/13,Europe,4/28/13,786
-993115842,Zambia,Cosmetics,Offline,M,7/26/14,Sub-Saharan Africa,8/20/14,3902
-887517058,Egypt,Cereal,Online,C,7/14/14,Middle East and North Africa,8/20/14,4875
-227726686,Togo,Clothes,Offline,L,06/01/10,Sub-Saharan Africa,6/28/10,8242
-529418551,Saudi Arabia,Vegetables,Online,H,11/04/11,Middle East and North Africa,11/20/11,5569
-228578984,Morocco,Vegetables,Offline,L,5/15/14,Middle East and North Africa,6/26/14,456
-531506812,Tunisia ,Office Supplies,Offline,L,10/28/10,Middle East and North Africa,11/23/10,3532
-464813363,Angola,Cosmetics,Offline,L,04/01/10,Sub-Saharan Africa,04/08/10,7458
-925422465,Vietnam,Cereal,Offline,H,5/22/11,Asia,06/02/11,1927
-630570447,Belarus,Meat,Online,L,1/20/14,Europe,2/15/14,8663
-167806136,Myanmar,Snacks,Offline,C,05/05/15,Asia,06/03/15,6420
-644990861,Lithuania,Fruits,Offline,H,5/25/13,Europe,06/04/13,5984
-540298449,Switzerland,Baby Food,Offline,M,3/26/11,Europe,5/15/11,5173
-652215230,Antigua and Barbuda ,Baby Food,Offline,M,11/30/12,Central America and the Caribbean,01/06/13,3835
-949540030,Mongolia,Meat,Offline,M,3/23/12,Asia,3/26/12,8851
-121384179,Greenland,Fruits,Online,L,7/30/11,North America,09/12/11,9131
-527171504,Eritrea,Cosmetics,Offline,H,8/30/10,Sub-Saharan Africa,10/07/10,618
-546638333,Lithuania,Baby Food,Online,C,3/28/10,Europe,4/28/10,1285
-429833495,Saint Vincent and the Grenadines,Personal Care,Offline,L,12/01/15,Central America and the Caribbean,12/08/15,6138
-947118318,Portugal,Vegetables,Offline,L,8/26/11,Europe,09/08/11,2212
-239166629,Somalia,Beverages,Offline,M,7/17/16,Middle East and North Africa,8/20/16,3575
-566964757,Turkey,Clothes,Online,M,11/20/12,Middle East and North Africa,12/07/12,6326
-661811530,Israel,Vegetables,Offline,H,7/23/10,Middle East and North Africa,09/10/10,3594
-675318276,Dominica,Clothes,Online,H,11/29/12,Central America and the Caribbean,12/28/12,540
-829408824,Luxembourg,Meat,Offline,C,01/07/13,Europe,2/23/13,9357
-966319501,Switzerland,Meat,Online,L,7/31/12,Europe,08/01/12,4269
-998599135,Singapore,Baby Food,Online,H,08/01/10,Asia,09/05/10,6530
-459109055,Cyprus,Snacks,Offline,C,8/25/14,Europe,10/13/14,9427
-751023089,Botswana,Baby Food,Offline,H,07/11/14,Sub-Saharan Africa,8/13/14,3276
-197827565,Belize,Office Supplies,Online,C,03/07/16,Central America and the Caribbean,4/21/16,428
-793321311,Malawi,Clothes,Online,C,4/15/15,Sub-Saharan Africa,05/09/15,260
-551615655,Kyrgyzstan,Personal Care,Online,H,2/24/16,Asia,3/23/16,4185
-257134425,Macedonia,Snacks,Online,C,10/11/12,Europe,10/12/12,645
-314613950,Rwanda,Household,Online,C,5/28/15,Sub-Saharan Africa,5/29/15,114
-299103057,Cape Verde,Snacks,Offline,C,5/19/16,Sub-Saharan Africa,06/11/16,96
-305963075,Pakistan,Office Supplies,Online,L,9/14/16,Middle East and North Africa,10/11/16,128
-500867831,Kyrgyzstan,Baby Food,Offline,M,8/24/14,Asia,09/02/14,6777
-669803655,Eritrea,Personal Care,Offline,H,02/11/17,Sub-Saharan Africa,3/14/17,8641
-669069373,Israel,Office Supplies,Online,C,2/27/13,Middle East and North Africa,04/10/13,1351
+~id,~label
+535113847,Azerbaijan
+874708545,Panama
+854349935,Sao Tome and Principe
+892836844,Sao Tome and Principe
+129280602,Belize
+473105037,Denmark
+754046475,Germany
+772153747,Turkey
+847788178,United Kingdom
+471623599,Kazakhstan
+554646337,Haiti
+278155219,Italy
+243761575,Malta
+223389232,Jordan
+509274518,Cambodia
+563966262,Saint Kitts and Nevis 
+370325791,Cameroon
+881526935,Bahrain
+871056020,Solomon Islands
+982711875,Monaco
+580605828,Comoros
+899161708,Iceland
+993115842,Zambia
+887517058,Egypt
+227726686,Togo
+529418551,Saudi Arabia
+228578984,Morocco
+531506812,Tunisia 
+464813363,Angola
+925422465,Vietnam
+630570447,Belarus
+167806136,Myanmar
+644990861,Lithuania
+540298449,Switzerland
+652215230,Antigua and Barbuda 
+949540030,Mongolia
+121384179,Greenland
+527171504,Eritrea
+546638333,Lithuania
+429833495,Saint Vincent and the Grenadines
+947118318,Portugal
+239166629,Somalia
+566964757,Turkey
+661811530,Israel
+675318276,Dominica
+829408824,Luxembourg
+966319501,Switzerland
+998599135,Singapore
+459109055,Cyprus
+751023089,Botswana
+197827565,Belize
+793321311,Malawi
+551615655,Kyrgyzstan
+257134425,Macedonia
+314613950,Rwanda
+299103057,Cape Verde
+305963075,Pakistan
+500867831,Kyrgyzstan
+669803655,Eritrea
+669069373,Israel
+Snacks,product
+Cosmetics,product
+Fruits,product
+Personal Care,product
+Household,product
+Clothes,product
+Vegetables,product
+Office Supplies,product
+Beverages,product
+Meat,product
+Cereal,product
+Baby Food,product
+Middle East and North Africa,Regions
+Central America and the Caribbean,Regions
+Sub-Saharan Africa,Regions
+Europe,Regions
+Asia,Regions
+Australia and Oceania,Regions
+North America,Regions
+covi-hit,new-virus
+supplies,type
