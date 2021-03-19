@@ -1,0 +1,86 @@
+import urllib
+import boto3
+import json
+
+tableName = 'WarrantyVault'
+
+# {
+#     "EventSource": "aws:sns",
+#     "EventVersion": "1.0",
+#     "EventSubscriptionArn": "arn:aws:sns:ap-south-1:250587962431:s3trigger:9f814207-34df-4b9d-b22a-360ca19d6dbc",
+#     "Sns": {
+#         "Type": "Notification",
+#         "MessageId": "7ef9d72f-bbc7-5454-b863-8fe199e6691a",
+#         "TopicArn": "arn:aws:sns:ap-south-1:250587962431:s3trigger",
+#         "Subject": "Amazon S3 Notification",
+#         "Message": "{\"Service\":\"Amazon S3\",\"Event\":\"s3:TestEvent\",\"Time\":\"2021-03-19T03:52:01.832Z\",\"Bucket\":\"ugwarrantyvault\",\"RequestId\":\"91EWC9TKR8TN4FEJ\",\"HostId\":\"BVdH7nkCfpAPQyaO6fDj0NB92BZhd1Yv018Dx7lKB/j+COtIIesGYX/DwvDVXMkb7zJ66tVwzzQ=\"}",
+#         "Timestamp": "2021-03-19T03:52:01.855Z",
+#         "SignatureVersion": "1",
+#         "Signature": "rmWQKC82DFxyqOb+DxjJj4X4Pggw9RguEiqn4MhvvHGE9fXXiXJxidHTvl2hk9SAU8bUCuyVd4Y82dCGYxt+Fk0qQ6WViK6c/WWYfVBRo7uHDAjEzCviXXoR+gpQtSwS9ZtwNBd+QWydadLf+PuPvl0XYwgcfwXEI+Qd4jTLi7WGrqmeNl4mJ/Zu7WFr5+xWqCQVyNXbKBOZkWC7Mkt8n8pme+Va1+h9JmxQx1DKKXxC5U5qtjGJCiD1vU/s+2QrwSJnTopdreHmNUWySFRJg8r2q+A2CFivYGvOwkFJkPTCGoHqus7HD+zMILRlb3nwVU5G1dxI2CqSj3GvXS896g==",
+#         "SigningCertUrl": "https://sns.ap-south-1.amazonaws.com/SimpleNotificationService-010a507c1833636cd94bdb98bd93083a.pem",
+#         "UnsubscribeUrl": "https://sns.ap-south-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:ap-south-1:250587962431:s3trigger:9f814207-34df-4b9d-b22a-360ca19d6dbc",
+#         "MessageAttributes": {}
+#     }
+# }
+
+
+dynamodb = boto3.resource('dynamodb')
+table = dynamodb.Table(tableName)
+textract = boto3.client('textract')
+comprehend = boto3.client('comprehend')
+
+
+def handler(event, context):
+    
+    source_bucket = event['Records'][0]['s3']['bucket']['name']
+    object_key = urllib.parse.unquote_plus(event['Records'][0]['s3']['object']['key'])
+
+
+    textract_result = textract.detect_document_text(
+        Document={
+            'S3Object': {
+                'Bucket': source_bucket,
+                'Name': object_key
+            }
+        }
+    )
+    page = ""
+    blocks = [x for x in textract_result['Blocks'] if x['BlockType'] == "LINE"]
+    for block in blocks:
+        page += " " + block['Text']
+
+    print(page)
+
+    text = page[:5000]
+
+    languages = comprehend.detect_dominant_language(
+        Text=text
+    )
+    dominant_language = sorted(languages['Languages'], key=lambda k: k['LanguageCode'])[0]['LanguageCode']
+    if dominant_language not in ['en', 'es', 'fr', 'de', 'it', 'pt']:
+        # optional: call Amazon translate to get it in english
+        # https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/translate.html#Translate.Client.translate_text
+        dominant_language = "en"
+
+    detected_entities = comprehend.detect_entities(
+        Text=text,
+        LanguageCode=dominant_language
+    )
+    selected_entity_types = ["ORGANIZATION", "PERSON", "LOCATION", "DATE"]
+    selected_entities = [x for x in detected_entities['Entities'] if
+                         x['Score'] > 0.9 and x['Type'] in selected_entity_types]
+
+    print(selected_entities)
+
+    print('Upload data to Dynamodb:', tableName)
+
+    table = dynamodb.Table(tableName)
+    response = table.update_item(
+          Item={
+            'username': pk,
+            'documentid': sk,
+            'Entities' = ORGANIZATION+';'+PERSON+';'+LOCATION+';'+DATE,
+                }
+            )
+
+    Print(response)
