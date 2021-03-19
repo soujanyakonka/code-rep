@@ -1,0 +1,51 @@
+import json
+import boto3
+
+
+tableName = 'WarrantyVault'
+
+dynamodb=boto3.resource('dynamodb')
+
+def lambda_handler(event, context):
+    
+    print ( "Lambda Trigger Event:" + json.dumps(event))
+    
+    try:
+        s3event  = json.dumps(event)
+        
+        variable = s3event[13:-2]
+        print(variable)
+        vari2 = json.loads(variable)
+        
+        snsobject  = vari2['Sns']['Message']
+        print(snsobject)
+        
+        #snsobjstr = json.dumps(snsobject)
+        snsobjstrext = snsobject[12:-2]
+        print(snsobjstrext)
+        
+        snsobjstrext2 = json.loads(snsobjstrext)
+        objectName  = snsobjstrext2['s3']['object']['key']
+        print("Object Name: " + objectName)
+        
+        objnew = objectName.split("/")
+        pk = objnew[0]
+        sk = objnew[1]
+        
+        print(pk)
+        print(sk)
+        
+        
+        table = dynamodb.Table(tableName)
+        response = table.put_item(
+        Item={
+            'username': pk,
+            'documentid': sk,
+            'status': 'Uploaded'
+        }
+    )
+    
+    except Exception as e:
+        print ("An error occured")
+        print(e)
+        return{'welcomeMessage' : 'Welcome'} 
